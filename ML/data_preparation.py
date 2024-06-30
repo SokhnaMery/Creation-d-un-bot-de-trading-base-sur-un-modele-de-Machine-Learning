@@ -1,14 +1,16 @@
 # import libraries
+import os
 import pandas as pd
+import pyarrow 
 from sqlalchemy import create_engine
 
 # Example: 'postgresql://username:password@localhost:5432/your_database'
 user = os.getenv("DB_USER")
 password = os.getenv("DB_PASSWORD")
-adress = os.getenv("DB_ADRESS")
-#address = os.environ['DB_ADDRESS']
+#adress = os.getenv("DB_ADRESS")
+adress = os.environ['DB_ADDRESS']
 
-conn_string = f"postgresql://{user}:{password}@{adress}:5432/data_binance"
+conn_string = f"postgresql://{user}:{password}@{adress}:5432/database_binance"
 
 print (' connexion à la base de donnees')
 

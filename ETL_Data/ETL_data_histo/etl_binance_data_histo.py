@@ -53,14 +53,14 @@ for i, ticker in enumerate(tickers):
 
 # IMPORT DES DONNEES HISTORIQUES DANS LA BASE DE DONNEES
 # connection au serveur de base de donnee Posgresql sur le cloud
-
+import os
 import psycopg2 
 user = os.getenv("DB_USER")
 password = os.getenv("DB_PASSWORD")
-adress = os.getenv("DB_ADRESS")
-#address = os.environ['DB_ADDRESS']
+#adress = os.getenv("DB_ADRESS")
+adress = os.environ['DB_ADDRESS']
 
-conn_string = f"postgresql://{user}:{password}@{adress}:5432/data_binance"
+conn_string = f"postgresql://{user}:{password}@{adress}:5432/database_binance"
 
 print (' connexion à la base de donnees')
 # Connexion avec psycopg2
