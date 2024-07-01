@@ -3,10 +3,10 @@ version: '3.7'
 services:
   app:
     build: .
-    image: mery/streaming-data:v1
+    image: sokhnamery/streaming-data:latest
     environment:
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
     env_file:
-      - .env
+      - .venv
     command: ["python", "etl_binance_data_streaming.py"]

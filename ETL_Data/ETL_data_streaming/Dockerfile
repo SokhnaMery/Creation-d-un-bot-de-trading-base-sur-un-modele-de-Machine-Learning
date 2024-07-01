@@ -20,4 +20,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Commande pour démarrer le script Python
-CMD ["python", "etl_binance_data_stream.py"]
+CMD ["python", "etl_binance_data_streaming.py"]

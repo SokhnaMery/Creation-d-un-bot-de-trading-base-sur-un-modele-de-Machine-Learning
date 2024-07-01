@@ -46,7 +46,8 @@ def get_kline_info(crypto_currency: str = Header(None, description='symbol of cr
     # Récupération des informations de connexion à partir des variables d'environnement
     user = os.getenv("DB_USER")
     password = os.getenv("DB_PASSWORD")
-    adress = os.getenv("DB_ADDRESS")
+    #adress = os.getenv("DB_ADDRESS")
+    adress = os.environ['DB_ADDRESS']
     conn_string = f"postgresql://{user}:{password}@{adress}:5432/database_binance"
 
     # Connexion with psycopg2

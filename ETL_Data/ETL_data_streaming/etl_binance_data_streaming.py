@@ -11,8 +11,9 @@ import os
 # Connection à la base des données Posgresql sur le cloud
 user = os.getenv("DB_USER")
 password = os.getenv("DB_PASSWORD")
-adress = os.getenv("DB_ADRESS")
-conn_string = f"postgresql://{user}:{password}@{adress}:5432/data_binance"
+#adress = os.getenv("DB_ADRESS")
+adress = os.environ['DB_ADDRESS']
+conn_string = f"postgresql://{user}:{password}@{adress}:5432/database_binance"
 conn = psycopg2.connect(conn_string)
 cursor = conn.cursor()
 
